@@ -7,6 +7,12 @@ describe(UniqueIdService.name, () => {
     service = new UniqueIdService();
   });
 
+  it(`Jasmine toBeTrue, toBe e toBeTruthy`, () => {
+    expect(true).toBeTrue(); // espera um tipo literal. Se passar new Boolean(true), falha
+    expect(true).toBe(true); // espera que os dois sejam iguais (se objetos, devem apontar para a mesma referência)
+    expect(true).toBeTruthy(); // É mais permissivo, aceita true literal, new Boolean(true), 1 ...
+  });
+
   it(`#${UniqueIdService.prototype.generateUniqueIdWithPrefix.name} should
     generate id when called with prefix`, () => {
     const id = service.generateUniqueIdWithPrefix('app');
@@ -31,12 +37,14 @@ describe(UniqueIdService.name, () => {
 
   it(`#${UniqueIdService.prototype.generateUniqueIdWithPrefix.name} should
     throw when called with empty`, () => {
-    const emptyValues = [null, undefined, ''];
+    const emptyValues = [null, undefined, '', '0', '1']; //, 'app']; //app não lança exceção, então o teste falhará
     emptyValues.forEach((v) => {
       // quando for testar exceção, tem que ser a chamada dentro de uma função
       expect(() => {
         service.generateUniqueIdWithPrefix(v);
-      }).toThrow();
+      }) // context da expectativa para saber qual elemento do loop deu erro
+        .withContext(v)
+        .toThrow();
     });
   });
 });
