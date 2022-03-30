@@ -1,0 +1,27 @@
+<!-- aria-live: utilizado quando mudamos o conteúdo de algum elemento dinamicamente
+  e queremos que o novo valor seja anunciado através de screen readers.
+
+  aria-atomic: indica para o screen reader se ele deve anunciar apenas o
+  conteúdo que mudou dinamicamente de uma live area ou se deve anunciar todo o conteúdo
+
+  aria-describedby: permite que o elemento seja descrito pelo elemento cujo o ID foi
+  atribuído à propriedade  -->
+
+<div class="like-widget-container" (click)="like()" (keyUp.enter)="like()">
+  <fa-icon
+    tabindex="0"
+    size="1px"
+    role="button"
+    [icon]="fonts.faThumbsUp"
+    [attr.aria-describedby]="id"
+  >
+  </fa-icon>
+  <span
+    [attr.id]="id"
+    [attr.aria-label]="likes + ': people liked'"
+    aria-live="true"
+    aria-atomic="true"
+    class="like-counter"
+    >{{ likes }}</span
+  >
+</div>
