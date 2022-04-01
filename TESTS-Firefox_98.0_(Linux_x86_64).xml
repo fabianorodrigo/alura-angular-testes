@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<testsuite name="Firefox 98.0 (Linux x86_64)" package="" timestamp="2022-04-01T17:50:06" id="0" hostname="vaio-VJF155F11X-B1011B" tests="10" errors="0" failures="0" time="0.13">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0"/>
+  </properties>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix should&#xA;    generate id when called with prefix" time="0.039" classname="Firefox_98_0_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix should&#xA;    throw when called with empty" time="0.001" classname="Firefox_98_0_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix should&#xA;    return the number of ids generated" time="0.001" classname="Firefox_98_0_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix should&#xA;    not generate duplicated id when called multiple times" time="0.002" classname="Firefox_98_0_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService Jasmine toBeTrue, toBe e toBeTruthy" time="0" classname="Firefox_98_0_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="LikeWidgetComponent #like should trigger (@Output liked) when called" time="0.045" classname="Firefox_98_0_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.012" classname="Firefox_98_0_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.01" classname="Firefox_98_0_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.011" classname="Firefox_98_0_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #like should trigger (@Output liked) when called" time="0.009" classname="Firefox_98_0_(Linux_x86_64).LikeWidgetComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

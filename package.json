@@ -6,6 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test-common": "ng test --browsers Chrome,Firefox ",
+    "test-ci": "ng test --browsers FirefoxHeadless --watch=false --reporters junit",
+    "coverage": "ng test --watch=false --sourceMap=true --codeCoverage=true --browsers FirefoxHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -42,6 +45,7 @@
     "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "karma-junit-reporter": "^2.0.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
